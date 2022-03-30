@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "JS-基本介紹"
+date:   2022-03-27
+author: Easyfun
+categories: Javascript
+cover:  "/assets/coffee-bean.jpg"
+---
+
+## JS語法介紹
+
+JavaScript型別系統分為「原始型別」和「物件型別」兩大類，原始型別沒有屬性與方法
+原始型別(Primitive types)
+
+＊ number
+＊ string
+＊ boolean
+＊ null
+＊ undefined
+＊ symbol(ES6)
+
+物件型別(Object types)
+原生物件(Native)
+
+    ▵原始型別包裹物件(Primitive Wrapper)
+        ＊ Number
+        ＊ String
+        ＊ Boolean
+
+    ▵ Array,Object
+    ▵ Date,Math,RegExp
+宿主物件(Host)
+
+    ◎ window(瀏覽器),global(Node.js)
+    ◎ DOM
+
+但JavaScript為了節省系統資源，原始型別在使用時會自動裝箱(boxing)形成原始型別包裹物件，使用完畢後會自動拆箱(unboxing)還原回原始型別。
+
+## 範例1.1
+
+    var str="string";
+    console.log(typeof str); //"string"
+    str.val=100;
+    console.log(str.val); //undefined
+
+使用物件型別的時候最容易搞錯的就是Number,String,Boolean 就差在第一個字母大寫
+
+    var obj = new String("string");
+    console.log(typeof obj); //"object"
+    obj.val=100;
+    console.log(obj.val); //100
+    console.log(typeof obj.valueOf()); //"string"
+
+<script>
+window.tooltips = window.tooltips || []
+window.tooltips.push(['#someId', { content: "This is the text of the tooltip!" }])
+window.tooltips.push(['#someOtherId', { content: "{% include tooltips/example.html %}", placement: "right" }])
+</script>
