@@ -34,7 +34,7 @@ pagination:
   enabled: false
   per_page: 5
   permalink: "/page/:num/"
-  sort_reverse: true
+  sort_reverse: false
 
 # Archive settings (see https://github.com/jekyll/jekyll-archives/)
 jekyll-archives:
