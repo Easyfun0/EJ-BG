@@ -1,0 +1,117 @@
+---
+layout: post
+title:  "JS-建構子"
+# date:   2022-04-06
+author: Easyfun
+categories: Javascript
+cover:  "/assets/coffee1.jpg"
+---
+
+## JS函式建構式（function constructor）
+
+在物件導向中，constructor是一個方法存在於class中，但JavaScript的function取代了constructor，所以我們在寫就不用特地寫出constructor的method，因為JavaScript在new就會執行function。
+
+這篇先來了解一下constructor做的事，暫且不談到太多物件導向的觀念。
+
+因此constructor就可以來設定物件的屬性(property)或者來呼叫(method)
+
+
+## 範例一
+
+    function Car(){
+        this.name = 'BMW'
+        this.price = 200
+    }
+    let bmw = new Car()
+        console.log(bmw)
+
+我們最常用的時候就是在建立函式時，下面的bmw透過new建立一個物件，裡面會繼承Car的屬性名稱以及屬性值。
+
+![alt text]({{ site.baseurl }}/assets/con1.png "Profile Picture"){:.profile}
+
+當我們new的時候，會先有一個空的物件先建立，函式裡的this會被指定成剛剛建立的空物件。
+
+當執行Car這個function執行this.name跟this.price時，this是在幫這空物件賦予屬性名稱和屬性值。
+
+## 範例二
+
+    function Car(){
+        console.log(this)
+    }
+    let bmw = new Car()
+
+這邊可以看得出來建立一個新的空物件名為Car
+
+![alt text]({{ site.baseurl }}/assets/con2.png "Profile Picture"){:.profile}
+
+## 範例三
+假如加上return就會以return的東西為主
+
+    function Car(){
+        this.name = 'BMW'
+        this.price = 200
+        return {"return": "我是return"}
+    }
+    let bmw = new Car()
+        console.log(bmw)
+
+回傳的結果會讓原本被建立的新物件不會被回傳，而是回傳return的內容
+
+![alt text]({{ site.baseurl }}/assets/con3.png "Profile Picture"){:.profile}
+
+## function constructor應用
+透過function的方式建立新物件，我們要建立同屬性但不同屬性值的內容，可以把物件的屬性值變成參數。
+
+    function Car(name, price){
+            this.name = name
+            this.price = price
+        }
+    let bmw = new Car('BMW', 200)
+        console.log(bmw)
+    let benz = new Car('BENZ', 150)
+        console.log(benz)
+
+![alt text]({{ site.baseurl }}/assets/con4.png "Profile Picture"){:.profile}
+
+
+## 沒有new
+
+要是我們在建構子後面產生新物件時忘了加上new的話。
+
+    function Car(name, price){
+            this.name = name
+            this.price = price
+        }
+    let bmw = Car('BMW', 200)
+        console.log(bmw)
+    let benz = new Car('BENZ', 150)
+        console.log(benz)
+
+JavaScript不知道你要執行程式還是要根據Car的function來建立物件，所以他會回傳undefined。
+
+![alt text]({{ site.baseurl }}/assets/con5.png "Profile Picture"){:.profile}
+
+
+## 總結
+🐤函式建構式（function constructor）就是一個function，只是可以透過這個function來建立物件。
+
+🐤在function前加上new的話，他會把this這個關鍵字建成一個新的物件，如果沒有指定回傳其他物件的話，而且不用加上return，他會自動回傳這個新物件給你。
+
+🐤prototype原型本身是個物件，同時具備constructor和＿proto＿，constructor指向建構函式，而＿proto＿則指向Object.prototype
+
+## 資料來源
+
+[運算子優先序][運算子優先序] @ MDN
+
+[談談 JavaScript 中的 function constructor 和關鍵字 new][談談 JavaScript 中的 function constructor 和關鍵字 new] @ pjchender.dev
+
+[運算子優先序]: https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+
+[談談 JavaScript 中的 function constructor 和關鍵字 new]: https://pjchender.blogspot.com/2016/06/javascriptfunction-constructornew.html
+
+
+<script>
+window.tooltips = window.tooltips || []
+window.tooltips.push(['#someId', { content: "This is the text of the tooltip!" }])
+window.tooltips.push(['#someOtherId', { content: "{% include tooltips/example.html %}", placement: "right" }])
+</script>
