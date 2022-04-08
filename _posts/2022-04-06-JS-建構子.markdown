@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JS-建構子"
-# date:   2022-04-06
+date:   2022-04-06
 author: Easyfun
 categories: Javascript
 cover:  "/assets/coffee1.jpg"
@@ -97,7 +97,7 @@ JavaScript不知道你要執行程式還是要根據Car的function來建立物�
 
 🐤在function前加上new的話，他會把this這個關鍵字建成一個新的物件，如果沒有指定回傳其他物件的話，而且不用加上return，他會自動回傳這個新物件給你。
 
-🐤prototype原型本身是個物件，同時具備constructor和＿proto＿，constructor指向建構函式，而＿proto＿則指向Object.prototype
+🐤prototype原型本身是個物件，同時具備constructor和＿proto＿，constructor指向建構函式，而＿proto＿則指向Object.prototype。
 
 ## 資料來源
 
