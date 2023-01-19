@@ -15,7 +15,9 @@ GCP ( Google Cloud Platform ) 是一系列由 Google 提供的雲端運算服務
 ### GCP優點
 
 1.資料中心在台灣，網路速度最快
+
 2.相較於其他平台，價格較低廉
+
 3.K8S早先是在Google開發的調度平台
 
 ### Google IAM
@@ -24,6 +26,7 @@ IAM(Identity and Access Management)
 GCP管理權限服務主要分兩大類
 
 1.專案權限
+
 2.網路(防火牆)權限
 
 ### Google BigQuery
