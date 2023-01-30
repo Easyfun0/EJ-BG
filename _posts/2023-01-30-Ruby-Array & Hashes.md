@@ -4,7 +4,6 @@ title:  "Ruby-Arrays and Hashes"
 date:   2023-01-30
 author: Easyfun
 categories: Ruby
-tags:	jekyll welcome
 cover:  "/assets/ror.jpeg"
 ---
 
