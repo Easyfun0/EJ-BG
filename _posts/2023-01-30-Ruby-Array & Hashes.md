@@ -19,11 +19,13 @@ Ruby中的Arrays和雜湊都是有索引的集合。
 
 可以使用a = Array.new 來建立
 
-    a = Array.new        #=> []
+{% highlight ruby %}
+a = Array.new        #=> []
 
-    Array.new(3)         #=> [nil, nil, nil]
+Array.new(3)         #=> [nil, nil, nil]
 
-    Array.new(3, true)   #=> [true, true, true]
+Array.new(3, true)   #=> [true, true, true]
+{% endhighlight %}
 
 創建一個單獨的數組，可以傳遞一個區塊。
 
