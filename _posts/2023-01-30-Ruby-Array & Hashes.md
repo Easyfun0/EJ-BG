@@ -31,7 +31,7 @@ Array.new(3, true)   #=> [true, true, true]
 
 這個方法可安全地用在可變對象例如:hashes,strings or other arrays
 
-{% highlight ruby %}
+{% highlight javascript %}
 Array.new(4) {Hash.new}    #=> [{}, {}, {}, {}]
 
 Array.new(4) {|i| i.to_s}  #=>["0", "1", "2", "3"]
