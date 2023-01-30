@@ -19,7 +19,7 @@ Ruby中的Arrays和雜湊都是有索引的集合。
 
 可以使用a = Array.new 來建立
 
-{% highlight ruby %}
+{% highlight javascript %}
 a = Array.new        #=> []
 
 Array.new(3)         #=> [nil, nil, nil]
