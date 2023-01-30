@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ruby的世界"
+title:  "Ruby-Arrays and Hashes"
 date:   2023-01-30
 author: Easyfun
 categories: Ruby
@@ -15,15 +15,15 @@ Ruby中的Arrays和雜湊都是有索引的集合。
 
 這兩個集合保存都是對象。數組中可以同時包含整數,字符串,浮點數。
 
-  a = [1, 'cat', 3.14]
+    a = [1, 'cat', 3.14]
 
 可以使用a = Array.new 來建立
 
-  a = Array.new        #=> []
+    a = Array.new        #=> []
 
-  Array.new(3)         #=> [nil, nil, nil]
+    Array.new(3)         #=> [nil, nil, nil]
 
-  Array.new(3, true)   #=> [true, true, true]
+    Array.new(3, true)   #=> [true, true, true]
 
 創建一個單獨的數組，可以傳遞一個區塊。
 
