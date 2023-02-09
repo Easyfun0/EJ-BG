@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby-Class"
-date:   2022-02-08
+date:   2023-02-08
 author: Easyfun
 categories: Ruby
 tags:	welcome
