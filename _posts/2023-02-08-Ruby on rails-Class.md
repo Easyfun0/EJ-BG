@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby的世界"
-date:   2022-04-20
+date:   2022-02-08
 author: Easyfun
 categories: Ruby
 tags:	welcome
@@ -43,7 +43,7 @@ g.name    # => Mike
 g.name = 'Easyfun'
 g.name    # => Easyfun
 
-{% endhightlight %}
+{% endhighlight %}
 
 Ruby提供的快捷方法:
 
