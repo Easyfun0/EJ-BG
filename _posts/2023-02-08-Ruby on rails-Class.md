@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ruby的世界"
+title:  "Ruby-Class"
 date:   2022-02-08
 author: Easyfun
 categories: Ruby
