@@ -17,7 +17,7 @@ cover:  "/assets/ror.jpeg"
 
 ### a || b
 
-求表達式a||b的值時，先求a的值。 如果a的值不是false或nil，則停止求值，回傳a:否則回傳b。
+求表達式 a || b的值時，先求a的值。 如果a的值不是false或nil，則停止求值，回傳a:否則回傳b。
 
 當需要為變量設置默認值時，經常會採用這種方式，只要變量的值還未設置，就會回傳變量的默認值。
 
@@ -31,5 +31,5 @@ price *= discount    #  price = price * discount
 count ||= 0          # count = count || 0
 {% endhighlight %}
 
-因此對於count ||= 0 如果count原來的值是nil或是false那復職後的他的值會變為0
+因此對於count || = 0 如果count原來的值是nil或是false那復職後的他的值會變為0
 
