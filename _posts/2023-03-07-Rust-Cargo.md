@@ -93,7 +93,7 @@ name = "world_hello"
 version = "0.1.0"
 edition = "2021"
 
-{% endhightlight %}
+{% endhighlight %}
 
 name定義了項目名稱，version定義當前版本，新項目是0.1.0，edition字段定義了我們使用的Rust大版本。
 
