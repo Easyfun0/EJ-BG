@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rust的世界"
+title:  "Cargo"
 date:   2023-03-07
 author: Easyfun
 categories: Rust
