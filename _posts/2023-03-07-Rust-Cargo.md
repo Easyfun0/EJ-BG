@@ -19,13 +19,34 @@ Cargo提供了一系列的工具，從項目的建立,構建到測試,運行直�
 
 {% highlight rust %}
 
-    cargo new new_demo
+$ cargo new new_demo
 
-    cd new_demo
+$ cd new_demo
 
 {% endhighlight %}
 
-### Rust開發效率
+會看到創建的結構
 
-Rust在開發最初手寫項目時，開發速度會慢於Go,Java等語言，但熟悉標準庫,熟悉生命週期和所有權的常用解決方法，開發效率將大幅提升，而且原生就能寫出高質量,安全,高效的程式碼。
+$ tree
+.
+├── .git
+├── .gitignore
+├── Cargo.toml
+└── src
+    └── main.rs
 
+
+### 運行方式
+
+有兩種方式可以運行項目:
+
+1.cargo run
+
+2.手動編譯和運行項目
+
+run運行後:
+> cargo run
+   Compiling new_demo v0.1.0 (/Users/huangyingjie/Rprojects/new_demo)
+    Finished dev [unoptimized + debuginfo] target(s) in 2.62s
+     Running `target/debug/new_demo`
+Hello, world!
