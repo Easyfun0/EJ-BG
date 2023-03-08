@@ -28,13 +28,14 @@ $ cd new_demo
 會看到創建的結構
 
 $ tree
-.
+
+```
 ├── .git
 ├── .gitignore
 ├── Cargo.toml
 └── src
     └── main.rs
-
+```
 
 ## 運行方式
 
@@ -47,11 +48,11 @@ $ tree
 run運行後:
 > cargo run
 
-   Compiling new_demo v0.1.0 (/Users/huangyingjie/Rprojects/new_demo)
+  Compiling new_demo v0.1.0 (/Users/huangyingjie/Rprojects/new_demo)
 
-    Finished dev [unoptimized + debuginfo] target(s) in 2.62s
+  Finished dev [unoptimized + debuginfo] target(s) in 2.62s
 
-     Running `target/debug/new_demo`
+  Running `target/debug/new_demo`
 
 Hello, world!
 
