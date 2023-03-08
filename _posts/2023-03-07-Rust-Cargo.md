@@ -48,6 +48,7 @@ $ tree
 run運行後:
 > cargo run
 
+```
   Compiling new_demo v0.1.0 (/Users/huangyingjie/Rprojects/new_demo)
 
   Finished dev [unoptimized + debuginfo] target(s) in 2.62s
@@ -55,6 +56,7 @@ run運行後:
   Running `target/debug/new_demo`
 
 Hello, world!
+```
 
 在這個狀態是debug模式，代碼的編譯速度會非常快，但運行的速度就慢了，在debug模式下，Rust編譯器不會做任何的優化，讓你的開發流程更加順暢。
 
@@ -112,11 +114,13 @@ name定義了項目名稱，version定義當前版本，新項目是0.1.0，edit
 
 這三種具體寫法:
 
+```
   [dependencies]
     rand = "0.3"
     hammer = { version = "0.5.0"}
     color = { git = "https://github.com/bjz/color-rs" }
     geometry = { path = "crates/geometry" }
+```
 
 
 
