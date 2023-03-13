@@ -119,7 +119,7 @@ fn main() {
 
 Rust中的布林型別有兩個值:true和false。布林值大小為一個位元組。要在Rust中定義布林型別的話:
 
-{% highlight %}
+{% highlight rust %}
 
 fn main() {
   let t = true;
