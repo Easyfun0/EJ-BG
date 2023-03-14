@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Rust的世界"
+title:  "Functions"
 date:   2023-03-14
 author: Easyfun
 categories: Rust
