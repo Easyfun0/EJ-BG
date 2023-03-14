@@ -113,6 +113,8 @@ fn main() {
   let remainder = 43 % 5;
 }
 
+{% endhighlight %}
+
 每一個陳述式中的表達式都使用了一個數學運算符號並計算出一個數值出來，賦值給該變數。
 
 ### 布林型別
@@ -175,17 +177,19 @@ fn main() {
 
 我們也可用句號(.)再加上數值的索引來取得元組內的元素。
 
+{% highlight rust %}
 
-    fn main() {
-      let x: (i32, f64, u8) = (500, 6.4, 1);
+fn main() {
+  let x: (i32, f64, u8) = (500, 6.4, 1);
 
-      let five_hundred =  x.0;
+  let five_hundred =  x.0;
 
-      let six_point_four = x.1;
+  let six_point_four = x.1;
 
-      let one = x.2;
-    }
+  let one = x.2;
+}
 
+{% endhighlight %}
 
 此建立了元組x，然後用他們個別的索引來存取元組的元素。和多數語言一樣，元組的第一個索引是0。
 
