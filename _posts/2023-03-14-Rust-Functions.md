@@ -116,4 +116,30 @@ For more information about this error, try `rustc --explain E0658`.
 
 let y = 6陳述式不回傳數值，所以x得不到任何數值。像是C或Ruby，他們的賦值仍能回傳所得到的值。在那些語言你可以==x = y = 6==同時讓x與y都取得6但在Rust就不行。
 
+我們用{}產生的作用域也是表達式。
+
+{% highlight rust %}
+
+fn main() {
+  let x = 5;
+
+  let y = {
+    let x = 3;
+    x + 1
+  };
+
+  println!("y的數值為: {y}");
+}
+
+{% endhighlight %}
+
+此表達式:
+
+    {
+      let x = 3;
+      x + 1
+    }
+
+就是一個會回傳4的區塊，此值再用let陳述式賦值給y。x + 1這行沒有加上分號，它和目前看到的寫法有點不同，因為表達式結尾不會加上分號。在此表達式機上分號，他就不會回傳數值。
+
 
