@@ -250,7 +250,7 @@ fn main() {
 
 #### 無效的陣列元素存取
 
-{ highlight rust }
+{% highlight rust %}
 
 use std::io;
 
