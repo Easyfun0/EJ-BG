@@ -275,7 +275,7 @@ fn main() {
 
 {% endhighlight %}
 
-此透過 ==cargo run== 執行並輸入0,1,2,3,4，程式將會印出陣列索引對應值。但輸入超過陣列長度，像是10的話，會看到此結果
+此透過 !==cargo run==! 執行並輸入0,1,2,3,4，程式將會印出陣列索引對應值。但輸入超過陣列長度，像是10的話，會看到此結果
 
 > thread 'main' panicked at 'index out of bounds: the len is 5 but the index is 10', src/main.rs:19:19
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
