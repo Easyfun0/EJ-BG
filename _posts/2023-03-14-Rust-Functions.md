@@ -142,4 +142,78 @@ fn main() {
 
 就是一個會回傳4的區塊，此值再用let陳述式賦值給y。x + 1這行沒有加上分號，它和目前看到的寫法有點不同，因為表達式結尾不會加上分號。在此表達式機上分號，他就不會回傳數值。
 
+### 函數回傳值
+
+函式可以回傳數值給呼叫他們的程式碼，我們不會為回傳值命名，但我們必須用箭頭(->)來宣告他們的型別。在Rust中，回傳值就是函式本體最後一行的表達式。可以用return關鍵字加上一個數值來提早回傳函式，但多數函式都能用最後一行的表達式作為數值回傳。
+
+    fn five() -> i32 {
+      5
+    }
+
+    fn main() {
+    let x = five()
+
+    println!("x的數值為: {x}");
+    }
+
+在five函式中沒有任何函式呼叫,巨集甚至是let陳述式，只有一個5。在Rust中是合理的函式。函式的回傳型別也有指名，就是-> i32。
+
+five中的5就是函式的回傳值，這就是為何回傳型別式i32。let x = five();顯示了我們用函式的回傳值作為變數的初始值。因為函式five回傳5，跟以下相同:
+
+    let x = 5;
+
+five函式沒有參數但有定義回傳值的型別。所以函式本體只需有一個5就好，不需加上分號，這就能當作表達式回傳我們要的值。
+
+{% highlight rust %}
+
+fn main() {
+  let x = plus_one(5);
+
+  println!("x的數值為: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+  x + 1
+}
+
+{% endhighlight %}
+
+此程式會顯示==x的數值為6==，如果我們在最後一行x + 1加上分號的話，會將它從表達式變為陳述式。
+
+{% highlight rust %}
+
+fn main() {
+  let x = plus_one(5);
+
+  println!("x的數值為: {x}");
+}
+
+fn plus_one(x: i32) -> i32 {
+  x + 1;
+}
+
+{% endhighlight%}
+
+會跳此錯誤
+
+{% highlight rust %}
+
+error[E0308]: mismatched types
+ --> /Users/huangyingjie/Rprojects/function/src/main.rs:7:24
+  |
+7 | fn plus_one(x: i32) -> i32 {
+  |    --------            ^^^ expected `i32`, found `()`
+  |    |
+  |    implicitly returns `()` as its body has no tail or `return` expression
+8 |     x + 1;
+  |          - help: remove this semicolon to return this value
+
+error: aborting due to previous error
+
+For more information about this error, try `rustc --explain E0308`.
+
+{% endhighlight %}
+
+此錯誤訊息mismatched types告訴此問題。plus_one的函式定義他會回傳i32但陳述式不會回傳任何數值。我們用單元型別()表示不會回傳任何值。因此沒有任何值被回傳，這和函式定義相牴觸，最後產生錯誤。Rust提供了一到訊息來解決問題:它建議移除分號，這樣就能修正。
+
 
