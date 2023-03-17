@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Comments"
-date:   2023-03-16
+date:   2023-03-15
 author: Easyfun
 categories: Rust
 cover:  "/assets/cover-thumb.png"
