@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "/EJ-Blog" # the base hostname & protocol for your site
 cover: "/assets/header_coffee.jpg"
 logo: "/assets/ej-logo-22.png"
-google_analytics: G-SM9DF8WHBD
+google_analytics: G-6M1MQGF86G
 
 # Build settings
 markdown: kramdown
