@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "/EJ-Blog" # the base hostname & protocol for your site
 cover: "/assets/header_coffee.jpg"
 logo: "/assets/ej-logo-22.png"
-google_analytics: G-VZZQPC7ZF3
+google_analytics: G-SM9DF8WHBD
 
 # Build settings
 markdown: kramdown
@@ -49,9 +49,6 @@ jekyll-archives:
 
 # Disqus comments
 # disqus_shortname: bencentra
-
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
 
 # Category descriptions (for archive pages)
 descriptions:
